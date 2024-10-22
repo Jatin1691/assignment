@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment with Diagonal Background</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif; 
+    }
+    h2, h3 {
+      font-family: 'Poppins', sans-serif; 
+    }
+
+    .rotate-box:hover {
+      animation: rotate360 1s linear;
+    }
+    @keyframes rotate360 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .custom-bg {
+      background-color: #4f46e5; 
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%); 
+      height: 100%; 
+      width: 100%; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; 
+    }
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      background-color: white;
+      border: 4px solid black;
+      border-radius: 50%;
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem; 
+    }
+
+    .icon-box-container {
+      position: relative;
+      margin-top: 2rem; 
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div id="assignment" class="relative overflow-hidden py-16">
+    <div class="custom-bg"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-8 z-10">
+      <h2 class="text-6xl font-bold  text-white mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="icon-box-container bg-white p-6 shadow-lg rounded-lg text-center hover:bg-blue-50 transition-transform rotate-box">
+          <div class="icon">🚨</div>
+          <h3 class="text-xl font-bold mt-6 mb-2">Emergency Plumbing Services</h3>
+          <p class="text-gray-600 mb-4">Our plumbers are ready to go 24/7 for emergencies-incuding nights, weekends and hildays</p>
+          <a href="#" class="text-blue-900 text-xl hover:underline">Explore this service ></a>
+        </div>
+
+        <div class="icon-box-container bg-white p-6 shadow-lg rounded-lg text-center hover:bg-blue-50 transition-transform rotate-box">
+          <div class="icon">🔧</div>
+          <h3 class="text-xl font-bold mt-6 mb-2">Plumbing and Drains</h3>
+          <p class="text-gray-600 mb-4">As the largest and drain service company, we make thousands of repair every day</p>
+          <a href="#" class="text-blue-900 text-xl hover:underline">Explore this service ></a>
+        </div>
+
+        <div class="icon-box-container bg-white p-6 shadow-lg rounded-lg text-center hover:bg-blue-50 transition-transform rotate-box">
+          <div class="icon">💧</div>
+          <h3 class="text-xl font-bold mt-6 mb-2">Water Damage</h3>
+          <p class="text-gray-600 mb-4">Our team equipped with state-of-the-art water extraction and cleanup equipment.</p>
+          <a href="#" class="text-blue-900 text-xl hover:underline">Explore this service ></a>
+        </div>
+
+        <div class="icon-box-container bg-white p-6 shadow-lg rounded-lg text-center hover:bg-blue-50 transition-transform rotate-box">
+          <div class="icon">🔥</div>
+          <h3 class="text-xl font-bold mt-6 mb-2">Water Heaters</h3>
+          <p class="text-gray-600 mb-4">Trust Roto-Rooter for repair and replacement of gas, electric and tankless water heaters.</p>
+          <a href="#" class="text-blue-900 text-xl hover:underline">Explore this service ></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+</body>
+</html>
